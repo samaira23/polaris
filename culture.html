@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polaris - Cultural Preferences</title>
+    <link rel="stylesheet" href="culture.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Polaris</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="culture.html">Itinerary</a></li>
+                <li><a href="index2.html">Booking</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="#">Login / Sign Up  </a></li>
+            </ul>
+          
+            <a href="#" class="menu-icon" aria-label="Toggle navigation">&#9776;</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>CULTURAL INTERESTS</h1>
+        <p>Fill out your preferences for your perfect tourist spot. Once you're done, hit the GO button!</p>
+        
+        <form id="preferences-form">
+            <label>VEG or NON-VEG?</label>
+            <div class="button-group">
+                <button type="button" class="veg active">VEG</button>
+                <button type="button" class="non-veg">NON-VEG</button>
+            </div>
+
+            <label>Any specific dietary preferences?</label>
+            <input type="text" id="dietary-preferences" placeholder="List your preferences here, if none, put 'NIL'">
+
+            <label>Do you like architecture? Would you like to explore some architectural marvels?</label>
+            <div class="button-group">
+                <button type="button" class="architecture-yes">YES</button>
+                <button type="button" class="architecture-no">NO</button>
+            </div>
+
+            <label>Are you interested in local history?</label>
+            <div class="button-group">
+                <button type="button" class="history-yes">YES</button>
+                <button type="button" class="history-no">NO</button>
+            </div>
+
+            <label>Are you interested in cultural dance / music?</label>
+            <div class="button-group">
+                <button type="button" class="music-yes">YES</button>
+                <button type="button" class="music-no">NO</button>
+            </div>
+
+            <label>Do you want to explore some local spiritual sites?</label>
+            <div class="button-group">
+                <button type="button" class="spiritual-yes">YES</button>
+                <button type="button" class="spiritual-no">NO</button>
+            </div>
+
+            <label>List out your transport preferences here.</label>
+            <input type="text" id="transport-preferences" placeholder="List your preferences here, if none, put 'NIL'">
+
+            <button type="submit" class="go-button">GO!</button>
+        </form>
+    </div>
+
+    <script src="culture.js"></script>
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

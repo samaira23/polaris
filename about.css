@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    border-bottom: 2px solid black;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.menu-icon {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    margin-right: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+}
+main {
+    padding-top: 80px; /* Add padding to ensure content is not hidden behind the fixed header */
+}
+main h1 {
+    font-size: 40px;
+    margin-top: 40px;
+    color: black;
+    visibility: visible;
+}
+
+h2 {
+font-size: 30px;
+text-decoration: underline;
+}
+
+.highlight {
+    font-weight: bold;
+}
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+    padding: 50px;
+    font-size: 20px;
+    margin-top: -40px;
+    margin-left: 70px;
+    margin-right: 70px;
+
+    
+}
+
+.content .text, .content .text2 {
+    flex: 1;
+    padding: 20px;
+}
+
+.content img {
+    flex: 1;
+    max-width: 20%;
+    height: 20%;;
+}
+
+.content.reversed {
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+  
+    .content, .content.reversed {
+        flex-direction: column;
+    }
+
+    .content img {
+        max-width: 100%;
+    }
+}
+
+.menu-icon:hover {
+    color: red;
+}

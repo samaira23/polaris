@@ -1,0 +1,204 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #fff;
+    padding: 2px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    color: black;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-icon {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    margin-right: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 800px; /* Adjust this value for desktop */
+    width: 90%; /* Default width for smaller screens */
+    margin: 50px auto; /* Center the container */
+    padding: 20px; /* Default padding */
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.active {
+    background: green;
+}
+
+button.veg.active {
+    background: green;
+}
+
+button.non-veg.active{
+    background: red;
+}
+
+button.veg::after {
+    content: " 🔵";
+}
+
+button.non-veg::after {
+    content: " 🔴";
+}
+
+
+input[type="text"] {
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.go-button {
+    background: black;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hide the menu by default on mobile */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+    .container {
+        padding: 20px;
+    }
+
+
+    .menu-icon {
+        display: block; 
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+.menu-icon:hover{
+    color: red;
+}
+
+button:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    transition:  0.2s;
+    transition-timing-function: ease-out 0.2s;
+}
+
+

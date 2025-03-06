@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polaris - Travel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Polaris</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+                <li><a href="culture.html">Itinerary</a></li>
+                <li><a href="index2.html">Booking</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="#">Login / Sign Up  </a></li>
+        </ul>
+      
+        <a href="#" class="menu-icon" aria-label="Toggle navigation">&#9776;</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>"UNVEIL THE MYSTERY OF TRAVEL, WITH US.."</h1>
+            <a href="index2.html">
+            <button class="cta-button">PLAN YOUR TRIP</button>
+        </a>
+        </div>
+    </section>
+
+
+
+<footer>
+        <p>2025 A POLARIS INITIATIVE </p>
+    </footer>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polaris - Travel Planning</title>
+    <link rel="stylesheet" href="about.css">
+   
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Polaris</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="culture.html">Itinerary</a></li>
+                <li><a href="index2.html">Booking</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="#">Login / Sign Up  </a></li>
+            </ul>
+          
+            <a href="#" class="menu-icon" aria-label="Toggle navigation">&#9776;</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Your itinerary partner, in your hands</h1>
+        <section class="content">
+            <div class="text">
+                <h2>The future of smart travel planning</h2>
+                <p>Craft your perfect journey with our Smart Travel and Transportation Booking Platform.</p>
+                 <p> Our innovative solution integrates multi-modal transportation options, itinerary planning, </p>
+                 <p>and a user-friendly interface to create a seamless travel experience tailored just for you.</p>
+            </div>
+            <img src="image2.png" alt="Travel image">
+        </section>
+        <section class="content reversed">
+            <div class="text2">
+                <h2>Get inspired</h2>
+                <p>Discover new destinations and travel tips from our tour guides. Explore featured</p>
+                    <p> itineraries and effortlessly incorporate them into your own travel plans.</p>
+            </div>
+            <img src="image3.png" alt="Travel image">
+        </section>
+    </main>
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
